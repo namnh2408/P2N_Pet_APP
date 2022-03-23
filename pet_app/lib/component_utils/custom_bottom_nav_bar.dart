@@ -39,7 +39,7 @@ class CustomBottomNavBar extends StatelessWidget {
             children: [
               IconButton(
                 icon: SvgPicture.asset(
-                  "icons/ShopIcon.svg",
+                  "assets/icons/ShopIcon.svg",
                   color: MenuState.home == selectedMenu
                       ? kPrimaryColor
                       : inActiveIconColor,
@@ -48,16 +48,16 @@ class CustomBottomNavBar extends StatelessWidget {
                     Navigator.pushNamed(context, HomeScreen.routeName),
               ),
               IconButton(
-                icon: SvgPicture.asset("icons/HeartIcon.svg"),
+                icon: SvgPicture.asset("assets/icons/HeartIcon.svg"),
                 onPressed: () {},
               ),
               IconButton(
-                icon: SvgPicture.asset("icons/ChatbubbleIcon.svg"),
+                icon: SvgPicture.asset("assets/icons/ChatbubbleIcon.svg"),
                 onPressed: () {},
               ),
               IconButton(
                 icon: SvgPicture.asset(
-                  "icons/UserIcon.svg",
+                  "assets/icons/UserIcon.svg",
                   color: MenuState.profile == selectedMenu
                       ? kPrimaryColor
                       : inActiveIconColor,

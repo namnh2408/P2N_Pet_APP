@@ -37,7 +37,7 @@ class _CartBodyState extends State<CartBody> {
               child: Row(
                 children: [
                   Spacer(),
-                  SvgPicture.asset("icons/Trash.svg"),
+                  SvgPicture.asset("assets/icons/Trash.svg"),
                 ],
               ),
             ),

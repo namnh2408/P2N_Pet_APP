@@ -26,13 +26,13 @@ class SpecialOffers extends StatelessWidget {
           child: Row(
             children: [
               SpecialOfferCard(
-                image: "pets/store.jpg",
+                image: "assets/pets/store.jpg",
                 category: "PetStore",
                 numOfBrands: 18,
                 press: () {},
               ),
               SpecialOfferCard(
-                image: "pets/km-3.jpg",
+                image: "assets/pets/km-3.jpg",
                 category: "Pet",
                 numOfBrands: 24,
                 press: () {},
