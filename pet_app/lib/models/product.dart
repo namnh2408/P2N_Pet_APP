@@ -27,9 +27,9 @@ List<Product> demoProducts = [
   Product(
     id: 1,
     images: [
-      "pets/cho-1.jpg",
-      "pets/cho-2.jpg",
-      "pets/cho-3.jpg",
+      "assets/pets/cho-1.jpg",
+      "assets/pets/cho-2.jpg",
+      "assets/pets/cho-3.jpg",
     ],
     colors: [
       Color(0xFFF6625E),
@@ -47,9 +47,9 @@ List<Product> demoProducts = [
   Product(
     id: 2,
     images: [
-      "pets/nhim-1.jpg",
-      "pets/nhim-2.jpg",
-      "pets/nhim-3.jpg"
+      "assets/pets/nhim-1.jpg",
+      "assets/pets/nhim-2.jpg",
+      "assets/pets/nhim-3.jpg"
     ],
     colors: [
       Color(0xFFF6625E),
@@ -66,9 +66,9 @@ List<Product> demoProducts = [
   Product(
     id: 3,
     images: [
-      "pets/chuot-1.jpg",
-      "pets/chuot-2.jpg",
-      "pets/chuot-3.jpg"
+      "assets/pets/chuot-1.jpg",
+      "assets/pets/chuot-2.jpg",
+      "assets/pets/chuot-3.jpg"
     ],
     colors: [
       Color(0xFFF6625E),
@@ -86,7 +86,7 @@ List<Product> demoProducts = [
   Product(
     id: 4,
     images: [
-      "pets/meo-1.jpg",
+      "assets/pets/meo-1.jpg",
     ],
     colors: [
       Color(0xFFF6625E),
@@ -94,7 +94,7 @@ List<Product> demoProducts = [
       Color(0xFFDECB9C),
       Colors.white,
     ],
-    title: " Mèo Ba tư",
+    title: "Mèo Ba tư",
     price: 500.0,
     description: description,
     rating: 4.1,
