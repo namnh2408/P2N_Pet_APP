@@ -8,6 +8,9 @@ import 'package:p2npet/helpers/shared_preferences_helper.dart';
 import 'package:p2npet/models/account_model.dart';
 import 'package:p2npet/models/login_model.dart';
 
+import '../../models/login_token_model.dart';
+import '../../models/result_model.dart';
+
 class LoginService extends BlocService<LoginModel> {
   @override
   Future<LoginModel> get(int id) {
@@ -28,16 +31,23 @@ class LoginService extends BlocService<LoginModel> {
   }
 
   Future<LoginModel> logIn(String username, String password) async {
-    Map<String, String> accountInput = {"username": username, "password": password};
+    Map<String, String> accountInput = {"Email": username, "Password": password};
     var rs = await HttpHelper.post(LOGIN_ENDPOINT, accountInput);
     print(rs.statusCode);
+    print('Đây nha');
     if (rs.statusCode == 200) {
       var jsonObject = jsonDecode(rs.body);
-      var account = LoginModel.fromJson(jsonObject);
-      currentLogin = account;
-      LocalHelper.saveAccountToLocal(account);
+      //print(jsonObject);
+      var result = ResultModel.fromJson(jsonObject);
 
-      return account;
+      var account = LoginTokenModel.fromJson(result.content);
+      print(account.Token);
+      //currentLogin = account;
+      //LocalHelper.saveAccountToLocal(account);
+
+      //return account;
+
+      return null;
     }
     return null;
   }
