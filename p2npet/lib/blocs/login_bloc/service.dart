@@ -33,11 +33,9 @@ class LoginService extends BlocService<LoginModel> {
   Future<LoginModel> logIn(String username, String password) async {
     Map<String, String> accountInput = {"Email": username, "Password": password};
     var rs = await HttpHelper.post(LOGIN_ENDPOINT, accountInput);
-    print(rs.statusCode);
-    print('Đây nha');
+    //print(rs.statusCode);
     if (rs.statusCode == 200) {
       var jsonObject = jsonDecode(rs.body);
-      //print(jsonObject);
       var result = ResultModel.fromJson(jsonObject);
 
       var account = LoginTokenModel.fromJson(result.content);
